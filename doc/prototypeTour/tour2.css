@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+body, html {
+    height: 100%;
+	font-family: Arial Narrow, Arial, sans-serif;
+}
+.container {
+    margin:0px;
+    padding:0px;
+    overflow: hide;
+	position: fixed;
+	bottom: 0px;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+    width:100%;
+    height:100%;
+    text-align:center;
+	background-color: #eee; /* Green */
+}
+div.wrapper{
+	width: 100%;
+	height:	calc(100% - 205px);
+	background-color: #333; /* dark grey */
+	background-image: url("images/img0_0.jpg");
+	background-size: contain;
+	background-repeat: no-repeat;
+   background-position: center; 
+}
+img {
+    display:table-cell;
+    width:100%;
+}
+.button50{
+	float: left;
+    width: calc(50% - 2.5px);
+	background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+	height: 20px;
+    padding: 15px 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+	margin-bottom: 5px;
+}
+.rightbutton
+{
+	margin-left: 5px;	
+}
+.button50:hover { 
+    background-color: yellow;
+}
+.button100{
+    width: 100%;
+	background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+	height: 20px;
+    padding: 5px 0 25px 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+	margin-bottom: 5px;
+}
+.map{
+	position: relative;
+	top: 10px;
+	left: 10px;
+	width: 100px;
+	height: 120px;
+    background-color: rgba(0,0,0,0.5);
+}
+.button100:hover { 
+    background-color: yellow;
+}
+.grey{
+	background-color: #888; /* gray */
+	opacity: 0.2;
+	filter: alpha(opacity=20);
+}
+.grey:hover 
+{ 
+	background-color: #888; /* gray */
+}
+.top{
+	background-color: #999;
+	height: 20px;
+}
+.bottom {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+    padding: 1em;
+	margin: 0px;
+	height: 150px;
+    background-color: #bba;
+}

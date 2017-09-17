@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="tour2.css">
+	<script>
+		var verbose=false;
+		var nodes = [
+						{
+							pos:[0,1],
+							img:["img0_0.png", "img0_1.png", "img0_2.png","img0_3.png","img0_4.png", "img0_5.png", "img0_6.png","img0_7.png"]
+						},
+						{
+							pos:[0,1],
+							img:["img1_0.gif", "img1_1.png", "img0_2.png","img0_3.png","img0_4.png", "img0_5.png", "img0_6.png","img1_7.png"]
+						},
+						{
+							pos:[1,1],
+							img:["img2_0.png", "img2_1.png", "img2_2.png","img2_3.png","img2_4.png", "img2_5.png", "img2_6.png","img2_7.png"]
+						},
+						{
+							pos:[1,1],
+							img:["img3_0.png", "img2_1.png", "img2_2.png","img2_3.png","img2_4.png", "img2_5.png", "img2_6.png","img2_7.png"]
+						},
+						{
+							pos:[0.7,0.3],
+							img:["img4_0.png", "img4_1.png", "img4_2.png","img4_3.png","img4_4.png", "img4_5.png", "img4_6.png","img4_7.png"]
+						}
+					];
+		var connections = [
+        [
+		 {node:0,dir:0},
+		 {node:1,dir:0}
+		],  // node = [n,o,z,w]
+        [
+		 {node:1,dir:0},
+		 {node:2,dir:0}
+		],		
+        [
+		 {node:2,dir:4},
+		 {node:1,dir:4}
+		],		
+        [
+		 {node:2,dir:0},
+		 {node:3,dir:0}
+		],
+    	[
+		 {node:0,dir:1},
+		 {node:4,dir:1}
+		],		
+    	[
+		 {node:1,dir:1},
+		 {node:4,dir:1}
+		],
+		[
+		 {node:4,dir:5},
+		 {node:1,dir:5}
+		],		
+    	[
+		 {node:4,dir:5},
+		 {node:0,dir:5}
+		]		
+    ];
+
+
+		function init()
+		{
+			//console.log("init Page");
+			createPage("deur open/dicht, animatie");
+			setDir(0);
+			loadNode(0);
+		}
+	</script>
+</head>
+<body>
+
+<script src="tour9.js"></script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="tour2.css">
+	<script>
+		var verbose=false;
+		var nodes = [
+						{
+							pos:[2,0],
+							img:["img0_0.jpg", "img0_1.jpg", "img0_2.jpg","img0_3.jpg"]
+						},
+						{
+							pos:[2,1],
+							img:["img1_0.jpg", "img1_1.jpg", "img1_2.jpg","img1_3.jpg"]
+						},
+						{
+							pos:[2,2],
+							img:["img2_0.jpg", "img2_1.jpg", "img2_2.jpg","img2_3.jpg"]
+						},
+						{
+							pos:[2,3],
+							img:["img3_0.jpg", "img3_1.jpg", "img3_2.jpg","img3_3.jpg"]
+						},
+						{
+							pos:[3,3],
+							img:["img4_0.jpg", "img4_1.jpg", "img4_2.jpg","img4_3.jpg"]
+						},
+						{
+							pos:[3,2],
+							img:["img5_0.jpg", "img5_1.jpg", "img5_2.jpg","img5_3.jpg"]
+						},
+						{
+							pos:[3,1],
+							img:["img6_0.jpg", "img6_1.jpg", "img6_2.jpg","img6_3.jpg"]
+						},
+						{
+							pos:[3,0],
+							img:["img7_0.jpg", "img7_1.jpg", "img7_2.jpg","img7_3.jpg"]
+						},
+						{
+							pos:[1,0],
+							img:["img8_0.jpg", "img8_1.jpg", "img8_2.jpg","img8_3.jpg"]
+						},
+						{
+							pos:[0,0],
+							img:["img9_0.jpg", "img9_1.jpg", "img9_2.jpg","img9_3.jpg"]
+						},
+						{
+							pos:[0,1],
+							img:["img10_0.jpg", "img10_1.jpg", "img10_2.jpg","img10_3.jpg"]
+						},
+						{
+							pos:[0,2],
+							img:["img11_0.jpg", "img11_1.jpg", "img11_2.jpg","img11_3.jpg"]
+						},
+						{
+							pos:[0,3],
+							img:["img12_0.jpg", "img12_1.jpg", "img12_2.jpg","img12_3.jpg"]
+						}
+					];
+		var connections = [
+        [
+		 {node:0,dir:3},
+		 {node:1,dir:3}
+		],  // node = [n,o,z,w]
+        [
+		 {node:1,dir:1},
+		 {node:0,dir:1}
+		],  // node = [n,o,z,w]
+        [
+		 {node:1,dir:3},
+		 {node:2,dir:3}
+		],  // node = [n,o,z,w]
+        [
+		 {node:2,dir:1},
+		 {node:1,dir:1}
+		],  // node = [n,o,z,w]
+        [
+		 {node:2,dir:3},
+		 {node:3,dir:3}
+		],  // node = [n,o,z,w]
+        [
+		 {node:3,dir:1},
+		 {node:2,dir:1}
+		],  // node = [n,o,z,w]
+        [
+		 {node:3,dir:0},
+		 {node:4,dir:0}
+		],
+	    [
+		 {node:4,dir:2},
+		 {node:3,dir:2}
+		],
+        [
+		 {node:4,dir:1},
+		 {node:5,dir:1}
+		],
+        [
+		 {node:5,dir:3},
+		 {node:4,dir:3}
+		],
+		[
+		 {node:5,dir:1},
+		 {node:6,dir:1}
+		],
+        [
+		 {node:6,dir:3},
+		 {node:5,dir:3}
+		],
+		[
+		 {node:6,dir:1},
+		 {node:7,dir:1}
+		],
+        [
+		 {node:7,dir:3},
+		 {node:6,dir:3}
+		],
+		[
+		 {node:0,dir:0},
+		 {node:7,dir:0}
+		],  // node = [n,o,z,w]
+        [
+		 {node:7,dir:2},
+		 {node:0,dir:2}
+		],
+		[
+		 {node:0,dir:2},
+		 {node:8,dir:2}
+		],  // node = [n,o,z,w]
+        [
+		 {node:8,dir:0},
+		 {node:0,dir:0}
+		],
+		[
+		 {node:8,dir:2},
+		 {node:9,dir:2}
+		],  // node = [n,o,z,w]
+        [
+		 {node:9,dir:0},
+		 {node:8,dir:0}
+		],
+		[
+		 {node:9,dir:3},
+		 {node:10,dir:3}
+		],  // node = [n,o,z,w]
+        [
+		 {node:10,dir:1},
+		 {node:9,dir:1}
+		],
+		[
+		 {node:10,dir:3},
+		 {node:11,dir:3}
+		],  // node = [n,o,z,w]
+        [
+		 {node:11,dir:1},
+		 {node:10,dir:1}
+		],
+		[
+		 {node:11,dir:3},
+		 {node:12,dir:3}
+		],  // node = [n,o,z,w]
+        [
+		 {node:12,dir:1},
+		 {node:11,dir:1}
+		],		
+		[
+		 {node:12,dir:0},
+		 {node:3,dir:0}
+		],  // node = [n,o,z,w]
+        [
+		 {node:3,dir:2},
+		 {node:12,dir:2}
+		],	
+		[
+		 {node:6,dir:2},
+		 {node:1,dir:2}
+		],  // node = [n,o,z,w]
+        [
+		 {node:1,dir:0},
+		 {node:6,dir:0}
+		],				
+		[
+		 {node:2,dir:2},
+		 {node:5,dir:2}
+		],  // node = [n,o,z,w]
+        [
+		 {node:2,dir:0},
+		 {node:5,dir:0}
+		],				
+    ];
+
+
+		function init()
+		{
+			//console.log("init Page");
+			createPage("map erbij");
+			setDir(0);
+			loadNode(0);
+		}
+	</script>
+</head>
+<body>
+
+<script src="tour8.js"></script>
+</body>
+</html>

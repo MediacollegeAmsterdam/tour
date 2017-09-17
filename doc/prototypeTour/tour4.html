@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="tour.css">
+	<script>
+		var verbose=false;
+		var nodes = [
+						{
+							pos:[0,0],
+							img:["img0_0.jpg", "img0_1.jpg", "img0_2.jpg","img0_3.jpg"]
+						}
+					];
+					
+		var connections = [
+        [
+		 {node:0,dir:1},
+		 {node:0,dir:1}
+		],  // node = [n,o,z,w]
+
+        ["img1_3.jpg", "img0_3.jpg"]
+    ];
+
+
+
+		function init()
+		{
+			//console.log("init Page");
+			createPage("Pijltjes toevoegen, SCHUIVEN van laatste naar eerste e.a.");
+			setDir(0);
+			loadNode(0);
+		}
+	</script>
+</head>
+<body>
+
+<script src="tour4.js"></script>
+</body>
+</html>
