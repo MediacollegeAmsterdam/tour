@@ -8,7 +8,7 @@ Wij gaan een .... maken, waarmee je .... etc etc.
 
 
 ## Waar staat je tour live?
-http://snoh.hosts.ma-cloud.nl/projects/tour/protoytpe360_viewer/index3.html
+http://snoh.hosts.ma-cloud.nl/projects/tour/protoytpe360_viewer/index4.html
 
 De briefing vind je online op:
 http://snoh.hosts.ma-cloud.nl/projects/tour/
