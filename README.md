@@ -1,7 +1,7 @@
 # tour
 
 ## wie zit er in je groepje
-...,...,...
+ari , bas , chris, danielle
 
 ## Omschrijf jouw tour kort 
 Wij gaan een .... maken, waarmee je .... etc etc.
