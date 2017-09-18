@@ -11,8 +11,8 @@ Wij gaan een .... maken, waarmee je .... etc etc.
 ## Waar staat je tour live?
 http://snoh.hosts.ma-cloud.nl/projects/tour/protoytpe360_viewer/index4.html
 
-De briefing vind je online op:
-http://snoh.hosts.ma-cloud.nl/projects/tour/
+De [briefing] vind je online.
+
 De map briefing hier is handig voor je leerkrachten, om volgend jaar WEER een virtual-tour te geven..
 
 # great examples..
@@ -20,9 +20,10 @@ De map briefing hier is handig voor je leerkrachten, om volgend jaar WEER een vi
 
 
 # contributors..
-Ga naar de[wiki].
+Ga naar de [wiki].
 Let op, we zoeken ook wiki contributors :)
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
    [wiki]: <https://github.com/MediacollegeAmsterdam/tour/wiki>
+   [briefing]: <http://snoh.hosts.ma-cloud.nl/projects/tour/>
