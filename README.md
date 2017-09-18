@@ -15,8 +15,14 @@ De briefing vind je online op:
 http://snoh.hosts.ma-cloud.nl/projects/tour/
 De map briefing hier is handig voor je leerkrachten, om volgend jaar WEER een virtual-tour te geven..
 
+# great examples..
+... hier komt jullie fork straks..?
 
 
 # contributors..
-Ga naar de [https://github.com/MediacollegeAmsterdam/tour/wiki][wiki].
+Ga naar de[wiki].
 Let op, we zoeken ook wiki contributors :)
+
+[//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. 
+
+   [wiki]: <https://github.com/MediacollegeAmsterdam/tour/wiki>
