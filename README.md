@@ -23,5 +23,5 @@ De map briefing hier is handig voor je leerkrachten, om volgend jaar WEER een vi
 Ga naar de[wiki].
 Let op, we zoeken ook wiki contributors :)
 
-# end
+[//]: # end
    [wiki]: <https://github.com/MediacollegeAmsterdam/tour/wiki>
