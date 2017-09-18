@@ -23,6 +23,5 @@ De map briefing hier is handig voor je leerkrachten, om volgend jaar WEER een vi
 Ga naar de[wiki].
 Let op, we zoeken ook wiki contributors :)
 
-[//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. 
-
+# end
    [wiki]: <https://github.com/MediacollegeAmsterdam/tour/wiki>
