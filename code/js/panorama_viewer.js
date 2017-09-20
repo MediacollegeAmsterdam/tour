@@ -5,7 +5,6 @@
 	Panorama viewer by Hjalmar Snoep
 	Expects a view-element with ID view3D, it builds from there..
 	*/
-
 	// data..
 	var mouse={x:0,y:0,down:false};
 	var rotx = 0; // current x rotation
@@ -14,7 +13,8 @@
 	var current_node=0;
 	 var objects=[];
 	 var callback=null;
-
+    var interval;
+	var heefttiensecondennietgeklikt = true;
 	function init()
 	{
 	// test the transformation on the total object
@@ -110,6 +110,7 @@
 	  }
 	
 		showNode();
+        loop();
   }
   function showNode()
   {
@@ -173,10 +174,15 @@
 			mouse.start_y=m.y;
 			mouse.down = true;
 			mouse.dir=e.target.getAttribute("dir");
+        	heefttiensecondennietgeklikt = false;
+        	clearTimeout(interval);
+        	interval = setTimeout(tienseconden, 1000);
 			e.preventDefault();
 
 	}
-
+	function tienseconden() {
+		heefttiensecondennietgeklikt = true;
+	}
 // helper function om muis offsets te kunnen berekenen, als dat nodig mocht worden.
   function transformMouseCoords(e)
   {
@@ -205,6 +211,24 @@
 	  }
 	  
   }
+    var kandraaien = true;
+	function loop() {
+		if(!document.hidden && document.hasFocus() && heefttiensecondennietgeklikt) {
+            roty += 0.1;
+            var str = 'rotateX(' + rotx + 'deg) rotateY(' + roty + 'deg)';
+            object3D.style.transform = str;
+            object3D.style.webkitTransform = str;
+            object3D.style.mozTransform = str;
+        }
+        if(kandraaien){
+            setTimeout( loop, 15);
+        }
+    }
+    var button = document.getElementById('intervalaanzetten');
+    button.addEventListener('click', function () {
+        heefttiensecondennietgeklikt = !heefttiensecondennietgeklikt;
+		button.innerHTML = heefttiensecondennietgeklikt ? 'Zet draaien uit' : 'Zet draaien aan';
+    });
   function setCallback(cb)
   {
 	  callback=cb;
