@@ -1,10 +1,10 @@
 # tourClone (Regular Developer)
-
+## Leider: Kim Jun Daní
 ## wie zit er in je groepje
-ari , bas , chris, danielle (MD4a)
+Zveau (MD2b)
 
 ## Omschrijf jouw tour kort 
-Wij gaan een .... maken, waarmee je .... etc etc.
+Wij gaan een auto rotatie maken, waarmee je automatisch roteert in de 360 view.
 
 ##vergeet niet de originele MediaCollegeAmsterdam/tour als dependency op te geven.
 
