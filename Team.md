@@ -49,4 +49,11 @@ Examples / use cases, bugs, documentation
   
   Everybody else..
   
+# Coördinators
+
+## Code examples & Gallery
+
+  - Bas Donjacour | MD2A | 22793@ma-web.nl
+  - Noah Falan    | MD2A | 14415@ma-web.nl
+  - Dalí Klaassen | MD2A | 22894@ma-web.nl
 
