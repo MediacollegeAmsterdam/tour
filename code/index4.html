@@ -2,9 +2,7 @@
 <html >
 <head>
   <meta charset="UTF-8">
-  <title>CSS Viewer, click to go to next node</title
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	  
+  <title>CSS Viewer, click to go to next node</title>
       <style>
 	  /* even wat dingen resetten2 */
 html, body, div {
@@ -57,11 +55,26 @@ body {
 <body>
   <div id="view3D">
 </div>
-<div id="feedback">Stap 5: Ik heb er een makkelijke library van gemaakt, je hoeft alleen het onderstaande scriptje (page source) aan te passen! <button id="intervalaanzetten">Zet draaien uit</button></div>
+<div id="feedback">Stap 5: Ik heb er een makkelijke library van gemaakt, je hoeft alleen het onderstaande scriptje (page source) aan te passen! <button id="intervalaanzetten">Zet draaien uit</button> <button onclick="panoramaEnable()"> Zet Panorama Aan </button> </div>
 
     <script src="js/panorama_viewer.js"></script>
-	<script src="js/no_zoom.js"></script>	
     <script>
+
+        function panoramaEnable() {
+            // als op de button wordt geklikt:
+            if(PV.getPanorama()==true)
+            {
+                PV.setPanorama(false);
+                panoramaButton.innerHTML ='Zet panorama uit' ;
+
+            }  else
+            {
+                PV.setPanorama(true);
+                panoramaButton.innerHTML = 'Zet panorama aan';
+            }
+
+        }
+
 		// PV =  Panorama Viewer, deze wordt aangemaakt door bovenstaande javascript.
 		var plek=0; // we houden bij op welke plek we zijn..
 		
