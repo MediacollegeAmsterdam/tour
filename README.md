@@ -1,5 +1,5 @@
-# tourClone (Regular Developer)
-## Leider: Kim Jun Daní
+# tourClone (Voor de normale (niet core) Developer)
+
 ## wie zit er in je groepje
 Zveau (MD2b)
 
