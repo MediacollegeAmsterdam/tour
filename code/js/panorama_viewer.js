@@ -38,7 +38,7 @@
 	  persp.style.perspective=perspective+"px"; // viewpoint/camera distance.
 	  persp.style.transformStyle="preserve-3d"; // makes objects block each other.
 	  persp.style.perspectiveOrigin="50% 50%"; // doesn't do anything, it seems, but this would put it in the middle, now we user marginLeft, marginTop..
-	  persp.style.transformOrigin="50% 0%"; // doesn't do anything, it seems, but this would put it in the middle, now we user marginLeft, marginTop..
+	  persp.style.transformOrigin="50% 50%"; // doesn't do anything, it seems, but this would put it in the middle, now we user marginLeft, marginTop..
 	  persp.style.marginLeft=(-(cube_panel_size-w_v)/2)+"px"; // this DOES!
 	  persp.style.marginTop=(-(cube_panel_size-h_v)/2)+"px";
 	  persp.style.width=cube_panel_size+"px"; 
