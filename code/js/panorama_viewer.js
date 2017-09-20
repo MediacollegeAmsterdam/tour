@@ -93,6 +93,8 @@
 		
 		  cube_side.style.left="0px";
 		  cube_side.style.backfaceVisibility="hidden"; // turn this of, to look at just the cube from the outside
+		  cube_side.style.webkitBackfaceVisibility="hidden"; //Safari fix - Added vendor attribute
+
 		  cube_side.style.width=cube_panel_size+"px";
 		  cube_side.style.height=cube_panel_size+"px";
 
