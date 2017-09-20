@@ -58,7 +58,7 @@ Examples / use cases, bugs, documentation
 Name | class | Email
 ----|---|---
 Rick Hinfelaar | MD2A | 23984@ma-web.nl
-Jordi Roodenburg | MD2A | ----@ma-web.nl
+Jordi Roodenburg | MD2A | 22455@ma-web.nl
 Jesse de Jong | MD2A | 24017@ma-web.nl
 
 ## Code examples & Gallery
