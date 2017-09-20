@@ -154,8 +154,9 @@
 			rotx += dy/5;
 			roty -= dx/10; 
 			// zorg dat je nooit over de kop kunt, met een paar graden speling
-		  if(rotx>85) rotx=85;
-		  if(rotx<-85) rotx=-85;
+		  if(rotx>0) rotx=0;
+		  if(rotx<-0) rotx=-0;
+			// ^ Zorgt ervoor dat je alleen maar horizontaal kan draaien, Niet meer in de hoogte. (als hoogte re-enable, verander 0 naar 85)
 
 		  var i;
 		  var str='rotateX(' + rotx + 'deg) rotateY(' + roty + 'deg)';
