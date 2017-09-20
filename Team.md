@@ -57,7 +57,7 @@ Examples / use cases, bugs, documentation
 ## Software, lead deveopers.
 Name | class | Email
 ----|---|---
-Rick Hinfelaar | MD2A | ----@ma-web.nl
+Rick Hinfelaar | MD2A | 23984@ma-web.nl
 Jordi Roodenburg | MD2A | ----@ma-web.nl
 Jesse de Jong | MD2A | ----@ma-web.nl
 
