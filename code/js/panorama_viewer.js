@@ -15,6 +15,9 @@
 	 var callback=null;
     var interval;
 	var heefttiensecondennietgeklikt = true;
+	var panorama = false;
+
+
 	function init()
 	{
 	// test the transformation on the total object
@@ -141,6 +144,13 @@
 		e.preventDefault();
      }
 
+    function setPanorama(b) {
+        panorama = !panorama;
+    }
+    function getPanorama() {
+        return panorama;
+    }
+
 	 function mouseMoveHandler(e) 
 	{
 	  e = e || window.event;
@@ -152,11 +162,19 @@
 		    mouse.x = m.x;
 		    mouse.y = m.y;
 			rotx += dy/5;
-			roty -= dx/10; 
+			roty -= dx/10;
+
 			// zorg dat je nooit over de kop kunt, met een paar graden speling
-		  if(rotx>0) rotx=0;
-		  if(rotx<-0) rotx=-0;
-			// ^ Zorgt ervoor dat je alleen maar horizontaal kan draaien, Niet meer in de hoogte. (als hoogte re-enable, verander 0 naar 85)
+			console.log(panorama);
+
+			if(panorama == true) {
+                if(rotx>85) {rotx=85;}
+                if(rotx<-85) {rotx=-85;}
+			} else if(panorama == false){
+                if(rotx>0) {rotx=0;}
+                if(rotx<0) {rotx=0;}
+			}
+
 
 		  var i;
 		  var str='rotateX(' + rotx + 'deg) rotateY(' + roty + 'deg)';
@@ -232,6 +250,7 @@
         heefttiensecondennietgeklikt = !heefttiensecondennietgeklikt;
 		button.innerHTML = heefttiensecondennietgeklikt ? 'Zet draaien uit' : 'Zet draaien aan';
     });
+
   function setCallback(cb)
   {
 	  callback=cb;
@@ -240,5 +259,7 @@
 	window.addEventListener("load",init.bind(this)); // wait until window is loaded..
 	window.PV={}; // export PV
 	window.PV.setCallback=setCallback;
+    window.PV.setPanorama=setPanorama;
+    window.PV.getPanorama=getPanorama;
 	window.PV.showCustomNode=showCustomNode;
 })();
