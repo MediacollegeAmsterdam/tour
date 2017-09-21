@@ -51,7 +51,7 @@
 	}
 	function panoSphereEvent(ev)
 	{
-		console.log(plug_in+"  plug-in receives event: "+json.stringify(ev));
+		console.log(plug_in+"  plug-in receives event: "+JSON.stringify(ev));
 	}
 	  
 	window.addEventListener("load",init.bind(this)); // wait until window is loaded..

@@ -188,6 +188,8 @@
 		if(dist_swiped<20)
 		{
 			//console.log("click direction "+mouse.dir);
+			 broadCastEvent({type:"click",data:mouse.dir});
+
 			if(callback!=null) callback(mouse.dir);
 		}
 		e.preventDefault();
@@ -278,10 +280,11 @@
   
   function showCustomNode(o)
   {
-	  console.log("\nshowing node:");
+	 // console.log("\nshowing node:");
+	 broadCastEvent({type:"show",data:o});
 	  for(var i=0;i<objects.length;i++)
 	  {
-		  console.log(objects[i].id+"->"+o[objects[i].id]);
+		 // console.log(objects[i].id+"->"+o[objects[i].id]);
 		  objects[i].dom.src=o[objects[i].id];
 	  }
 	  
