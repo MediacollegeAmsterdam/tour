@@ -2,6 +2,7 @@
 {	
 	/*
 	Panorama Sphere viewer by Hjalmar Snoep and MD2A and MD2B
+	kleine wijziging
 	*/
 	// private data..
 	var mouse={x:0,y:0,down:false};
