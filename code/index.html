@@ -16,10 +16,11 @@
 	<div id="menu">
 		<button id="draaienButton" onclick="draaienEnable()">Zet draaien aan</button>
 		<button id="sphereButton" onclick="panoramaEnable()"> Zet SphereModus uit </button>
-		<button onclick="loadLocation(0)"> laad Locatie 1 </button>
-		<button onclick="loadLocation(2)"> laad Locatie 2 </button>
+		<button onclick="loadLocation(0)"> Laad Locatie 1 </button>
+		<button onclick="loadLocation(2)"> Laad Locatie 2 </button>
+    <button onclick="showPopup()"> Uitleg </button>
 	</div>
-  
+
     <script>
 
         function panoramaEnable() {
@@ -53,8 +54,8 @@
 
 		// panoSphere =  Panorama Viewer, deze wordt aangemaakt door bovenstaande javascript.
 		var plek=0; // we houden bij op welke plek we zijn..
-		
-		
+
+
 		function loadLocation(x)
 		{
 			// laat een nieuwe plek zien.
@@ -66,8 +67,9 @@
 				up: "img/node"+x+"/up.jpg",
 			    down: "img/node"+x+"/down.jpg",
 			});
+      panoSphere.popup.show("je bent nu in de aula");
 		}
-		
+
 		panoSphere.setCallback(clickSomething); // zodra de gebruiker klikt, wordt dit aangeroepen.
 		function clickSomething(richting)
 		{
@@ -77,4 +79,3 @@
 	</script>
 </body>
 </html>
-
