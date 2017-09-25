@@ -15,53 +15,53 @@ Geven leiding aan het project, besluiten of feature requests worden omgezet in e
 Geven leiding aan sub-project, besluiten hoe feature requests worden aangepakt, kunnen feature requests doen en bugs melden
 
 Subprojects, Showcases, Examples, feature requests, issues, bugs, documentation
-  - Rick Hinfelaar (MD2a)
-  - Jordi Roodenburg (MD2a)
-  - Jesse de Jong (MD2a)
-  - Simon Boerrigter (MD2b)
-  - Rico Schwab (MD2b)
-  - Mark van Dorremaal (MD2b)
-  - Justin van de Kruit (MD2b)
-  - Dani de Jong (MD2b)
+  - Rick Hinfelaar (MD2A)
+  - Jordi Roodenburg (MD2A)
+  - Jesse de Jong (MD2A)
+  - Simon Boerrigter (MD2B)
+  - Rico Schwab (MD2B)
+  - Mark van Dorremaal (MD2B)
+  - Justin van de Kruit (MD2B)
+  - Dani de Jong (MD2B)
 
-## Developers (bootcamp 12 of meer)
+## Developers (Bootcamp 12 of meer)
 
 Subprojects, Showcases, Examples, feature requests, issues, bugs, documentation
-  - Rick Hinfelaar
-  - Simon Boerrigter
-  - Rico Schwab
-  - Mark van Dorremaal
-  - Justin van de Kruit
-  - Dani de Jong
-  - Menouer Nobach
-  - Martijn Smit
+  - Rick Hinfelaar (MD2A)
+  - Simon Boerrigter (MD2B)
+  - Rico Schwab (MD2B)
+  - Mark van Dorremaal (???)
+  - Justin van de Kruit (MD2B)
+  - Dani de Jong (MD2B)
+  - Menouer Nobach (MD2A)
+  - Martijn Smit (???)
 
-## Contributors (bootcamp 6 of meer):  
+## Contributors (Bootcamp 6 of meer):  
 
 Showcases, Examples, feature requests, issues, bugs, documentation
-  - Maurice de Jong
-  - Nick Hordijk
-  - Harun van der Keur
-  - Peter Boersma
-  - Maarten Kampmeijer
-  - Job Groen
-  - cas foole
+  - Maurice de Jong (MD2A)
+  - Nick Hordijk (MD2A)
+  - Harun van der Keur (MD2A)
+  - Peter Boersma (???)
+  - Maarten Kampmeijer (???)
+  - Job Groen (???)
+  - Cas Foole (???)
 
-## Testing & Documentation (bootcamp <6 of niks ingeleverd)
+## Testing & Documentation (Bootcamp <6 of niks ingeleverd)
 Examples / use cases, bugs, documentation
   
   Everybody else..
   
 # Coördinators
 
-## Software, lead developers.
+## Software, lead developers
 Name | class | Email
 ----|---|---
 Rick Hinfelaar   | MD2A | 23984@ma-web.nl
 Jordi Roodenburg | MD2A | 22455@ma-web.nl
 Jesse de Jong    | MD2A | 24017@ma-web.nl
 
-## Code examples & Gallery
+## Code examples & Gallery (Wiki)
 If you have a nice example for us, please ask:
 
 Name | class | Email
