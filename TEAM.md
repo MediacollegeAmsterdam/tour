@@ -66,7 +66,6 @@ If you have a nice example for us, please ask:
 
 Name | class | Email
 ----|---|---
-Bas Donjacour | MD2A | 22793@ma-web.nl
 Noah Falan    | MD2A | 14415@ma-web.nl
 Dalí Klaassen | MD2A | 22894@ma-web.nl
 
@@ -75,3 +74,4 @@ Dalí Klaassen | MD2A | 22894@ma-web.nl
 Name | class | Email
 ----|---|---
 Cem den Ouden | MD2A | 22315@ma-web.nl
+Bas Donjacour | MD2A | 22793@ma-web.nl
