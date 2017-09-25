@@ -1,4 +1,4 @@
-# project hierarchy
+# Project Hierarchy
 Contributions and feature requests should follow the chain of command all the way up to Project Leader.
 Branching structure may vary.
 Coordinators, see bottom of the document.
@@ -57,9 +57,9 @@ Examples / use cases, bugs, documentation
 ## Software, lead developers.
 Name | class | Email
 ----|---|---
-Rick Hinfelaar | MD2A | 23984@ma-web.nl
+Rick Hinfelaar   | MD2A | 23984@ma-web.nl
 Jordi Roodenburg | MD2A | 22455@ma-web.nl
-Jesse de Jong | MD2A | 24017@ma-web.nl
+Jesse de Jong    | MD2A | 24017@ma-web.nl
 
 ## Code examples & Gallery
 If you have a nice example for us, please ask:
