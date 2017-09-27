@@ -1,81 +1,93 @@
 <!DOCTYPE html>
-<html >
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>panoSphere</title>
-  <link rel="stylesheet" type="text/css" href="css/panoSphereExample.css">  <!-- basicStyles for the example. -->
-  <link rel="stylesheet" type="text/css" href="css/panoPopup.css">  <!-- basicStyles for the popups. -->
-  <script src="js/panoSphere.js"></script>
- <script src="js/panoPopup.js"></script>
-</head>
+	<meta charset="UTF-8">
+	<title>panoSphere</title>
+	<link href="css/panoSphereExample.css" rel="stylesheet" type="text/css"><!-- basicStyles for the example. -->
+	<link href="css/panoPopup.css" rel="stylesheet" type="text/css"><!-- basicStyles for the popups. -->
 
-<body>
-	<div id="view3D">
-	</div>
-
-	<div id="menu">
-		<button id="draaienButton" onclick="draaienEnable()">Zet draaien aan</button>
-		<button id="sphereButton" onclick="panoramaEnable()"> Zet SphereModus uit </button>
-		<button onclick="loadLocation(0)"> Laad Locatie 1 </button>
-		<button onclick="loadLocation(2)"> Laad Locatie 2 </button>
-    <button onclick="showPopup()"> Uitleg </button>
-	</div>
-
-    <script>
-
-        function panoramaEnable() {
-            // als op de button wordt geklikt:
-            if(panoSphere.getSphereMode()==true)
-            {
-                panoSphere.setSphereMode(false);
-                document.getElementById("sphereButton").innerHTML ='Zet SphereModus aan' ;
-
-            }  else
-            {
-                panoSphere.setSphereMode(true);
-                document.getElementById("sphereButton").innerHTML ='Zet SphereModus uit' ;
-            }
-
-        }
-	   function draaienEnable() {
-            // als op de button wordt geklikt:
-            if(panoSphere.options.autoPan==true)
-            {
-               panoSphere.options.autoPan=false;
-               document.getElementById("draaienButton").innerHTML ='Zet draaien uit' ;
-
-            }  else
-            {
-                panoSphere.options.autoPan=true;
-                document.getElementById("draaienButton").innerHTML = 'Zet draaien aan';
-            }
-
-        }
-
-		// panoSphere =  Panorama Viewer, deze wordt aangemaakt door bovenstaande javascript.
-		var plek=0; // we houden bij op welke plek we zijn..
-
-
-		function loadLocation(x)
-		{
-			// laat een nieuwe plek zien.
-			panoSphere.showCustomNode({
-				front: "img/node"+x+"/front.jpg",
-			    back: "img/node"+x+"/back.jpg",
-				left: "img/node"+x+"/left.jpg",
-			    right: "img/node"+x+"/right.jpg",
-				up: "img/node"+x+"/up.jpg",
-			    down: "img/node"+x+"/down.jpg",
-			});
-      panoSphere.popup.show("je bent nu in de aula");
-		}
-
-		panoSphere.setCallback(clickSomething); // zodra de gebruiker klikt, wordt dit aangeroepen.
-		function clickSomething(richting)
-		{
-			console.log("er is geklikt op: "+richting);
-			panoSphere.popup.show("er is geklikt op: "+richting);
-		}
+	<script src="js/panoSphere.js">
 	</script>
+	<script src="js/panoPopup.js">
+	</script>
+</head>
+<body>
+	<div id="view3D"></div>
+	<div id="menu">
+		<button id="draaienButton" onclick="draaienEnable(this)">Zet draaien aan</button>
+    <button id="sphereButton" onclick="panoramaEnable(this)">Zet SphereModus uit</button>
+    <button id="autoSwitchLocation" onclick="autoSwitchLocation(this)">Zet Auto Locatie Switch Aan</button>
+    <button onclick="loadLocation(0)">laad Locatie 1</button>
+    <button onclick="loadLocation(2)">laad Locatie 2</button>
+	</div>
+	<script>
+  var autoSwitch = false;
+  function autoSwitchLocation(view) {
+      // Load new location every 10 seconds.
+      if(!autoSwitch) {
+        autoSwitch = true;
+        var delay = 10000;
+        view.innerHTML = 'Zet Auto Locatie Switch Uit';
+        if(plek == 0) {
+          loadLocation(2);
+        } else {
+          loadLocation(0);
+        }
+        setInterval(function() {
+          if(autoSwitch) {
+            if(plek == 0) {
+              loadLocation(2);
+            } else {
+              loadLocation(0);
+            }
+          }
+        },delay);
+      } else {
+        autoSwitch = false;
+        view.innerHTML = 'Zet Auto Locatie Switch Aan';
+      }
+  }
+
+  function panoramaEnable(view) {
+  	// als op de button wordt geklikt:
+  	if (panoSphere.getSphereMode() == true) {
+  		panoSphere.setSphereMode(false);
+  		view.innerHTML = 'Zet SphereModus aan';
+  	} else {
+  		panoSphere.setSphereMode(true);
+  		view.innerHTML = 'Zet SphereModus uit';
+  	}
+  }
+
+  function draaienEnable(view) {
+  	// als op de button wordt geklikt:
+  	if (panoSphere.options.autoPan == true) {
+  		panoSphere.options.autoPan = false;
+  		view.innerHTML = 'Zet draaien uit';
+  	} else {
+  		panoSphere.options.autoPan = true;
+  		view.innerHTML = 'Zet draaien aan';
+  	}
+  }
+  // panoSphere =  Panorama Viewer, deze wordt aangemaakt door bovenstaande javascript.
+  var plek = 0; // we houden bij op welke plek we zijn..
+  function loadLocation(x) {
+    plek = x;
+  	// laat een nieuwe plek zien.
+  	panoSphere.showCustomNode({
+  		front: "img/node" + x + "/front.jpg",
+  		back: "img/node" + x + "/back.jpg",
+  		left: "img/node" + x + "/left.jpg",
+  		right: "img/node" + x + "/right.jpg",
+  		up: "img/node" + x + "/up.jpg",
+  		down: "img/node" + x + "/down.jpg",
+  	});
+  }
+  panoSphere.setCallback(clickSomething); // zodra de gebruiker klikt, wordt dit aangeroepen.
+  function clickSomething(richting) {
+  	console.log("er is geklikt op: " + richting);
+  	panoSphere.popup.show("er is geklikt op: " + richting);
+  }
+  </script>
 </body>
 </html>
